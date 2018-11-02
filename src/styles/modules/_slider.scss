@@ -1,7 +1,7 @@
 .slider {
   position: relative;
   @include mq('tablet-wide') {
-    padding: 20px;
+    margin: 20px;
   }
 
   > .slide__container {
