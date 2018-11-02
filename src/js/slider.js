@@ -1,7 +1,8 @@
 // Init slider
 $(document).ready(function(){
   $slides = $('.slider').find($('.slide__container'));
-  $slides.find('.slide__content').append('<div class="dots"></div>')
+  $slides.find('.slide__content').append('<div class="dots"></div>');
+  
   $slides.each(function(i){
     i++
     var $this = $(this);
@@ -10,6 +11,7 @@ $(document).ready(function(){
     $('.dots').append($dot);
     $this.attr('data-product', dataNumber);
   })
+
   $color = $('[data-product="1"]').find('.slide__item--variants a:first-child').attr('data-color');
   $('[data-color="'+$color+'"]').addClass('active');
   setTimeout(function(){

@@ -472,6 +472,15 @@ a {
       .slider .dots .dots__item:last-child {
         margin-bottom: 0; }
 
+footer {
+  padding: 40px 20px;
+  background: #5da552;
+  text-align: center;
+  color: #ffffff; }
+  footer > span {
+    line-height: 1.5;
+    text-transform: uppercase; }
+
 .bkg-color--divided {
   text-align: center; }
   @media only screen and (min-height: 480px) {

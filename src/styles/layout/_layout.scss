@@ -1,3 +1,13 @@
+footer {
+	padding: 40px 20px;
+	background: $brand-primary;
+	text-align: center;
+	color: $font-color-negative;
+	> span {
+		line-height: 1.5;
+		text-transform: uppercase;
+	}
+}
 .bkg-color--divided {
 	text-align: center;
 	@include mq('mobile', height) {

@@ -38,4 +38,3 @@ jQuery(document).ready(function($){
 
 });
 });
-console.log(jQuery.sharedCount('https://makingsense.com/'));
