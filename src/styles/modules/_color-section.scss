@@ -1,0 +1,18 @@
+.bkg-color {
+  background: $brand-primary;
+  color: $font-color-negative;
+  &--divided {
+    overflow: hidden;
+    @include pseudo(before,150%, 150%, 0, -100%){
+      transform: skewX(-30deg);
+      background: $brand-secondary;
+    }
+    .container {
+      position: relative;
+    }
+  }
+  a,
+  .btn {
+    color: $font-color-negative;
+  }
+}

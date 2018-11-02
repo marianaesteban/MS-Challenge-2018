@@ -1,0 +1,108 @@
+html,
+body {
+	-webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+ 	font: $primary-font;
+}
+
+h1 {
+	font-weight: $font-wight-light;
+	font-size: 2em;
+	line-height: 0.9;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	margin: 40px 0;
+	@include mq('tablet-portrait') {
+		font-size: em(38px);
+		line-height: 0.7;
+	}
+}
+
+h2 {
+  font-size: 1.6em;
+	line-height: 1.25;
+	letter-spacing: 0.02em;
+	margin: 20px 0;
+	@include mq('tablet-portrait') {
+		font-size: em(36.16px);
+	}
+}
+
+h3 {
+  font-size: 1.25em;
+  line-height: 1.25;
+	letter-spacing: 0.01em;
+	margin-bottom: 16px;
+}
+h4 {
+  font-size: 1.12em;
+	line-height: 1.25;
+	letter-spacing: 0.01em;
+	margin-bottom: 14px;
+}
+h5 {
+  font-size: 1em;
+	line-height: 1.25;
+	letter-spacing: 0.01em;
+	margin-bottom: 12px;
+}
+h6 {
+  font-size: .85em;
+	line-height: 1.25;
+	letter-spacing: 0.01em;
+	margin-bottom: 10px;
+}
+
+blockquote,
+blockquote p {
+  font-size: 1.25em;
+  line-height: 1.25;
+}
+
+ul,
+ol {
+	list-style-position: outside;
+	padding-left: 35px;
+	font-size: em($font-size);
+	line-height: 1.5;
+	margin-bottom: 40px;
+}
+ul {
+	list-style-type: disc;
+}
+ol {
+	list-style-type: decimal;
+}
+ul ul,
+ol ul {
+	list-style-type: circle;
+  list-style-position: outside;
+  margin-left: 15px;
+}
+ol ol,
+ul ol {
+  list-style-type: lower-latin;
+  list-style-position: outside;
+  margin-left: 15px;
+}
+
+p {
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+a {
+	color: $font-color;
+	text-decoration: none;
+	@include ease-in-out($transition-duration);
+	&:hover {
+		color: darken($font-color, 20%);
+	}
+}

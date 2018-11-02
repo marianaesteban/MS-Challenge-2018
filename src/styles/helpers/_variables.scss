@@ -1,0 +1,35 @@
+// Fonts
+$primary-font-family     :  'Open Sans', sans-serif;
+$secondary-font-family   :  'Montserrat', sans-serif;
+$font-weight-regular     :  600;
+$font-weight-bold        :  700;
+$font-wight-light        :  400;
+$font-color              :  #333333;
+$font-color-negative     :  #ffffff;
+$font-size               :  16px;
+
+$primary-font            :  $font-weight-regular em($font-size) $primary-font-family;
+
+// Colors
+$brand-primary           :  #5da552;
+$brand-secondary         :  #333333;
+
+// Screen sizes
+$breakpoints-width: (
+    "mobile"           :  480px,
+    "tablet-small"     :  640px,
+    "tablet-portrait"  :  768px,
+    "tablet-landscape" :  992px,
+    "tablet-wide"      :  1024px,
+    "desktop"          :  1248px,
+    "desktop-wide"     :  1440px
+);
+$breakpoints-height: (
+    "mobile"           :  480px,
+    "mobile-tall"      :  580px,
+    "tablet"           :  768px
+);
+
+// Transition
+$transition-duration        :  250ms;
+$transition-duration-fast   :  150ms;

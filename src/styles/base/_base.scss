@@ -1,0 +1,53 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: $primary-font;
+	color: $font-color;
+  @include mq('desktop') {
+    font-size: em($font-size + 2px);
+  }
+}
+
+section {
+	padding: 60px 20px 80px 20px;
+	@include mq('tablet-portrait') {
+		padding: 80px 50px 100px 50px;
+	}
+  .container {
+    > *:first-child {
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+}
+
+.container {
+	max-width: 960px;
+	@include auto;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+figure {
+	font-size: 0;
+	margin: 24px 0 24px 0;
+	@include mq('tablet-portrait') {
+		margin: 40px 0 40px 0;
+	}
+	figcaption {
+		font-size: $font-size;
+		margin-top: 20px;
+		text-align: center;
+	}
+}

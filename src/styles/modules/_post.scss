@@ -1,0 +1,35 @@
+.post {
+  h1,
+  h2 {
+    text-align: center;
+  }
+  .excerpt {
+    max-width: 768px;
+    min-width: 260px;
+    @include auto;
+    margin-bottom: 30px;
+    margin-top: 25px;
+    text-align: center;
+    font-weight: $font-wight-light;
+    font-size: em(16px);
+    @include mq('tablet-wide') {
+      width: 80%;
+      font-size: em(20px);
+    }
+    @include mq('desktop') {
+      margin-bottom: 70px;
+      margin-top: 65px;
+    }
+  }
+  
+  figure {
+    @include pseudo(after, 100%, 100%, 0, 0) {
+      @include background-gradient(rgba(0,0,0,0), #151515 150%, vertical);
+    }
+  }
+  p {
+    @include mq('desktop') {
+      margin-bottom: 50px;
+    }
+  }
+}

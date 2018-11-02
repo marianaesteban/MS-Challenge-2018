@@ -1,0 +1,26 @@
+{
+  "name": "ms-srrux-dev-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mariana Esteban",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.3.1",
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-uglify": "^3.0.1",
+    "gulp-useref": "^3.1.6"
+  },
+  "dependencies": {
+    "gulp-cssnano": "^2.1.3"
+  }
+}

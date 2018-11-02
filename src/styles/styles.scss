@@ -1,0 +1,14 @@
+// Vars and mixins
+@import "/helpers/**/*.scss";
+
+// Basic styles
+@import "base/**/*.scss";
+
+// Reusable single elements
+@import "components/**/*.scss";
+
+// Reusable groups of elements (components)
+@import "modules/**/*.scss";
+
+// Pages
+@import "layout/**/*.scss";

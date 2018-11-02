@@ -1,0 +1,123 @@
+// Transitions
+@mixin ease-in-out ($duration) {
+  transition: all $duration ease-in-out;
+}
+@mixin transition ($duration) {
+  transition: all $duration;
+}
+
+// Center with margin auto
+@mixin auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Define vertical, horizontal, or both position
+@mixin center($position) {
+  position: absolute;
+
+  @if $position == 'vertical' {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  @else if $position == 'horizontal' {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+  }
+  @else if $position == 'both' {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+// Gradients
+@mixin background-gradient($start-color, $end-color, $orientation) {
+    background: $start-color;
+
+    @if $orientation == 'vertical' {
+      background: -webkit-linear-gradient(top, $start-color, $end-color);
+      background: linear-gradient(to bottom, $start-color, $end-color);
+    } @else if $orientation == 'horizontal' {
+      background: -webkit-linear-gradient(left, $start-color, $end-color);
+      background: linear-gradient(to right, $start-color, $end-color);
+    } @else if $orientation == 'diagonal' {
+      background: -webkit-linear-gradient(-35deg, $start-color 0%, $start-color 55%, $end-color 55%, $end-color 100%);
+      background: linear-gradient(125deg, $start-color 0%, $start-color 55%, $end-color 55%, $end-color 100%);
+    } @else {
+      background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+      background: radial-gradient(ellipse at center, $start-color, $end-color);
+    }
+}
+
+// Pseudo elements
+@mixin pseudo($ba,$width,$height,$top,$left,$rel:true,$content:null) {
+  @if ($rel == true) {
+    position: relative;
+  }
+  &:#{$ba} {
+    position: absolute;
+    width:$width;
+    height:$height;
+    top:$top;
+    left:$left;
+    content: "#{$content}";
+    @content;
+  }
+}
+
+// Aspect ratio boxes
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+// Media queries, defaults to min-width
+
+@mixin mq($value, $respond-to: width, $type: min, $breakpoints: null) {
+  @if($respond-to == width) {
+    $breakpoints: $breakpoints-width;
+  }
+  @if($respond-to == height) {
+    $breakpoints: $breakpoints-height;
+  }
+    @if map_has_key($breakpoints, $value) {
+        $value: map_get($breakpoints, $value);
+        @if $type == max {
+            $value: $value - 1px;
+        }
+        @media only screen and (#{$type}-#{$respond-to}: $value) {
+            @content;
+        }
+    }
+}
+
+@mixin portrait_orientation {
+  @media only screen and (max-aspect-ratio: 1/1){
+    @content;
+  }
+}
+
+@mixin landscape_orientation {
+	@media only screen and (min-aspect-ratio: 1/1){
+		@content;
+  }
+}

@@ -1,0 +1,26 @@
+.bkg-color--divided {
+	text-align: center;
+	@include mq('mobile', height) {
+		height: 100vh;
+	}
+	h1 {
+		margin-bottom: 40px;
+		@include mq('mobile-tall', height) {
+			margin-bottom: 70px;
+		}
+	}
+	// Center content so it makes more sense
+	.container {
+		@include mq('mobile-tall', height) {
+			@include center(both);
+			width: calc(100vw - 80px);
+			height: auto;
+		}
+		@include mq('mobile-tall', height, max) {
+			@include landscape_orientation {
+				position: relative;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,14 @@
+{
+  "folderSrc" : {
+    "root"  : "src",
+    "css"   : "src/styles",
+    "js"    : "src/js",
+    "img"   : "src/img"
+  },
+  "folderDist" : {
+    "root"  : "dist",
+    "css"   : "dist/styles",
+    "js"    : "dist/js",
+    "img"   : "dist/img"
+  }
+}
