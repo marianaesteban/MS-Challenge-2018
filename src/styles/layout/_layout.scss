@@ -5,7 +5,11 @@ footer {
 	color: $font-color-negative;
 	> span {
 		line-height: 1.5;
+		letter-spacing: 0.05em;
 		text-transform: uppercase;
+	}
+	.sharedcount {
+		margin: 4px 0 8px 0;
 	}
 }
 .bkg-color--divided {
