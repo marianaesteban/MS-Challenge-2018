@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var deploy = require('gulp-gh-pages');
 
 // Browser sync
 var browserSync = require('browser-sync').create();
@@ -86,3 +87,11 @@ gulp.task('build', function (done){
 });
 
 gulp.task('default', gulp.series('serve'));
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
+});

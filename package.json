@@ -13,6 +13,7 @@
     "browser-sync": "^2.26.12",
     "del": "^3.0.0",
     "gulp": "^4.0.2",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-imagemin": "^4.1.0",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.1.0",
