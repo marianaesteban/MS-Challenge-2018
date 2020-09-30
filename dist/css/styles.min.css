@@ -278,7 +278,7 @@ a {
   position: relative; }
   @media only screen and (min-width: 1024px) {
     .slider {
-      padding: 20px; } }
+      margin: 20px; } }
   .slider > .slide__container {
     opacity: 0;
     -webkit-transition: all 250ms ease-in-out;
